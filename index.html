@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050103">
+  <meta name="description" content="送给我亲爱的陈茜，一颗为你闪耀的红色粒子爱心。">
+  <title>送给我亲爱的陈茜</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23ef334f' d='M32 56 7 31C-10 9 19-5 32 14 45-5 74 9 57 31Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css?v=4">
+</head>
+<body>
+  <main id="experience" aria-label="红色粒子爱心动画">
+    <canvas id="heart" aria-label="悬浮轻摆的红色粒子爱心，发光圆环与向上缠绕的光丝"></canvas>
+    <video id="heart-fallback" data-src="./assets/red-heart-loop.mp4" poster="./assets/poster-loop.png" hidden autoplay muted loop playsinline preload="none" disablepictureinpicture aria-label="红色粒子爱心动画"></video>
+    <div class="topline"><span class="small-heart" aria-hidden="true">♡</span><span>为你心动</span></div>
+    <h1 class="dedication">送给我亲爱的陈茜</h1>
+    <button id="playback" class="icon-button" type="button" aria-label="暂停动画" title="暂停动画">
+      <svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>
+      <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="m9 6 9 6-9 6Z"/></svg>
+    </button>
+    <footer class="footer">
+      <button id="music-toggle" class="music" type="button" aria-label="播放背景音乐" aria-pressed="false">
+        <span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="music-copy"><span class="track">静音恋人 <span class="track-sub">（两颗缠绕的心）</span></span><span class="status" id="music-status">正在准备音乐</span></span>
+        <svg class="music-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 9 6-9 6Z"/></svg>
+      </button>
+      <p class="hint" id="hint" role="status" aria-live="polite"></p>
+    </footer>
+    <p id="render-error" hidden>动画暂未加载，请刷新网页重试。</p>
+  </main>
+  <audio id="bgm" preload="auto" autoplay loop playsinline></audio>
+  <script type="module" src="./app.js?v=8"></script>
+</body>
+</html>
